@@ -4,6 +4,7 @@ import { inject } from 'vue'
 
 const emit = defineEmits(['openDrawer'])
 
+
 defineProps({
   totalPrice: Number
 })
