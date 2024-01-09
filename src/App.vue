@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white rounded-xl shadow-xl xl:mt-10 mt-5 xl:w-4/5 w-11/12 mx-auto">
+  <div class="bg-white rounded-xl shadow-xl xl:my-10 my-5 xl:w-4/5 w-11/12 mx-auto">
     <Drawer :totalPrice="totalPrice" :dostavka-price="DostavkaPrice" v-if="drawerOpen"/>  
     <Header :total-price="totalPrice" @open-drawer="openDrawer"/>
 

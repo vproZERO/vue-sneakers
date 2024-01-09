@@ -20,7 +20,7 @@ defineProps({
         </div>
 
         <ul class="flex items-center gap-10 mt-5 xl:mt-0">
-          <li @click="() => emit('openDrawer')" class="flex text-[14px] xl:text-lg items-center xl:gap-3 gap-2 text-gray-500 hover:text-black cursor-pointer" >
+          <li @click="() => emit('openDrawer')" class="flex w-[130px] md:w-[100px] text-[14px] xl:text-lg items-center xl:gap-3 gap-2 text-gray-500 hover:text-black cursor-pointer" >
             <img class="w-[16px] xl:w-[20px]" src="/src/assets/cart.svg" alt="cart">
             <b >{{ totalPrice }} $</b>
           </li>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative bg-white border border-slate-200 xl:rounded-3xl rounded-lg p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
+    class="relative bg-white border border-slate-200 xl:rounded-3xl rounded-lg p-8 cursor-pointer transition lg:hover:-translate-y-2 lg:hover:shadow-xl"
   >
     <img
       @click="onClickFavorite"
@@ -8,7 +8,7 @@
       :src="!isFavorite ? like1 : like2"
       alt="like 1"
     />
-    <img class="h-[170px]" :src="imageUrl" :alt="title" />
+    <img class="xl:h-[170px] w-full" :src="imageUrl" :alt="title" />
     <p class="mt-2">{{ title }}</p>
 
     <div class="flex justify-between mt-5">

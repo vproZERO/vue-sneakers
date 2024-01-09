@@ -1,5 +1,5 @@
 <template>
-  <div class="grid xl:grid-cols-4 gap-5">
+  <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-5">
     <Cart
       v-for="item in items"
       :isAdded="item.isAdded"
