@@ -1,7 +1,5 @@
         
 <script setup>
-import { inject } from 'vue'
-
 const emit = defineEmits(['openDrawer'])
 
 
