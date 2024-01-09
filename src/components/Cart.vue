@@ -3,6 +3,7 @@
     class="relative bg-white border border-slate-200 xl:rounded-3xl rounded-lg p-6 cursor-pointer transition lg:hover:-translate-y-2 lg:hover:shadow-xl"
   >
     <img
+      v-if="onClickFavorite"
       @click="onClickFavorite"
       class="absolute top-8 left-8 hover:-translate-y-1 transition"
       :src="!isFavorite ? like1 : like2"
@@ -16,7 +17,7 @@
         <span class="text-slate-400">Цена:</span>
         <b>${{ price }}</b>
       </div>
-      <img @click="onClickAdd" :src="!isAdded ? plus : checked" alt="plus" />
+      <img v-if="onClickAdd" @click="onClickAdd" :src="!isAdded ? plus : checked" alt="plus" />
     </div>
   </div>
 </template>
@@ -38,4 +39,7 @@ const props = defineProps({
   onClickAdd: Function,
   onClickFavorite: Function,
 });
+
+
+const visibleFavoriteButton = Boolean(props.onClickFavorite); 
 </script>

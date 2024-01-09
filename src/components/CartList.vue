@@ -6,8 +6,8 @@
       data-aos-duration="1500"
       v-for="item in items"
       :isAdded="item.isAdded"
-      :onClickAdd="() => emit('addToCart', item)"
-      :onClickFavorite="() => emit('addToFavorite', item)"
+      :onClickAdd="isFavorites ? null : () => emit('addToCart', item)"
+      :onClickFavorite="isFavorites ? null : () => emit('addToFavorite', item)"
       :id="item.id"
       :key="item.id"
       :imageUrl="item.imageUrl"
@@ -23,6 +23,7 @@ import { inject } from "vue";
 
 defineProps({
   items: Array,
+  isFavorites: Boolean,
   addToFavorite: Function,
 });
 
