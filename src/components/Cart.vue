@@ -9,7 +9,7 @@
       :src="!isFavorite ? like1 : like2"
       alt="like 1"
     />
-    <img class="lg:h-[240px] md:h-[350px] h-[290px] w-full rounded-lg" :src="imageUrl" :alt="title" />
+    <img class="h-auto w-full rounded-lg" :src="imageUrl" :alt="title" />
     <p class="mt-2">{{ title }}</p>
 
     <div class="flex justify-between mt-5">
