@@ -11,7 +11,7 @@
     />
     <img class="h-auto w-full rounded-lg" :src="imageUrl" :alt="title" />
     <p class="mt-2">{{ title }}</p>
-
+    
     <div class="flex justify-between mt-5">
       <div class="flex flex-col">
         <span class="text-slate-400">Цена:</span>

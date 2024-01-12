@@ -6,7 +6,7 @@
       :buttonDisabled="cartButtonDisabled"
       @createOrder="createOrder"
       :totalPrice="totalPrice"
-      :dostavkaPrice="DostavkaPrice"
+      :dostavkaPrice="dostavkaPrice"
       v-if="drawerOpen"
     />
     <Header :total-price="totalPrice" @open-drawer="openDrawer" />
@@ -31,7 +31,7 @@ const drawerOpen = ref(false);
 const totalPrice = computed(() =>
   cart.value.reduce((acc, item) => acc + +item.price, 0)
 );
-const DostavkaPrice = computed(() => Math.round(totalPrice.value * 0.05));
+const dostavkaPrice = computed((acc, item) => Math.round(totalPrice.value / 5));
 
 const cartButtonDisabled = computed(
   () => isCreatingOrder.value || cartIsEmpty.value
@@ -65,6 +65,7 @@ const createOrder = async () => {
       {
         items: cart.value,
         totalPrice: totalPrice.value,
+        dostavkaPrice: dostavkaPrice.value,
       }
     );
 
