@@ -21,7 +21,7 @@ const emit = defineEmits(["createOrder"]);
     class="fixed top-0 left-0 bottom-0 h-full w-full transition bg-black z-10 opacity-30"
   ></div>
   <div
-    class="bg-white lg:w-96  w-9/12 h-full fixed right-0 transition top-0 bottom-0 z-20 p-8 overflow-y-auto"
+    class="bg-white lg:w-96 w-9/12 h-full fixed right-0 transition top-0 bottom-0 z-20 p-8 overflow-y-auto"
   >
     <DrawerHead />
 

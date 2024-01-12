@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="bg-white rounded-xl shadow-xl xl:my-10 my-5  w-11/12 mx-auto"
-  >
+  <div class="bg-white rounded-xl shadow-xl xl:my-10 my-5 w-11/12 mx-auto">
     <Drawer
       :buttonDisabled="cartButtonDisabled"
       @createOrder="createOrder"
@@ -12,7 +10,7 @@
     <Header :total-price="totalPrice" @open-drawer="openDrawer" />
 
     <div class="xl:p-10 p-6">
-        <router-view></router-view>
+      <router-view></router-view>
     </div>
   </div>
 </template>

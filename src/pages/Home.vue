@@ -84,7 +84,7 @@ const addToFavorite = async (item) => {
     if (!item.isFavorite) {
       const obj = {
         parentId: item.id,
-        item
+        item,
       };
       item.isFavorite = true;
 
@@ -124,11 +124,11 @@ watch(cart, () => {
     <h2 class="xl:text-3xl text-xl font-bold xl:mb-8 mb-2">Все кросовки</h2>
 
     <div class="xl:flex gap-4">
-
-
-      
-      <select   @change="onChangeSelect" class="header_select py-2 xl:h-[43px] w-full mb-3 xl:mb-0 px-3 border rounded-md outline-none">
-        <option  selected class="custom-option" value="name">По названию</option>
+      <select
+        @change="onChangeSelect"
+        class="header_select py-2 xl:h-[43px] w-full mb-3 xl:mb-0 px-3 border rounded-md outline-none"
+      >
+        <option selected class="custom-option" value="name">По названию</option>
         <option class="custom-option" value="price">По цене (дешевые)</option>
         <option class="custom-option" value="-price">По цене (дорогие)</option>
       </select>
@@ -136,7 +136,7 @@ watch(cart, () => {
       <div class="relative search-container">
         <i class="fas text-gray-300 fa-search absolute left-3 top-3"></i>
         <input
-        type="text"
+          type="text"
           @input="onChangeSearchinput"
           class="search-input border mb-8 xl:mb-0 border-gray-200 rounded-md w-full py-2 pl-10 pr-4 outline-none focus:border-gray-400"
           placeholder="Поиск..."
